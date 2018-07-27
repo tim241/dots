@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+#
+# Please note
+# This script isn't perfect
+# So don't whine about shellcheck complaining
+# Thank you for reading and understanding
+#
 set -e
 git submodule update --init
 
@@ -11,12 +17,12 @@ do
 done
 
 rm -rf "$HOME/.vim"
-ln -sf "$dir/.vim"       "$HOME/.vim"
 
-ln -sf "$dir/.Xresources" "$HOME/.Xresources"
-ln -sf "$dir/.bashrc"     "$HOME/.bashrc"
-ln -sf "$dir/.vimrc"      "$HOME/.vimrc"
-ln -sf "$dir/.gtkrc-2.0"  "$HOME/.gtkrc-2.0"
+symlink_items=".Xresources .bashrc .vimrc .gtkrc-2.0 .vim"
+for item in $symlink_items
+do
+    ln -sf "$dir/$item" "$HOME/$item"
+done
 
 yes | vim -c :PluginInstall -c :qa!
 
