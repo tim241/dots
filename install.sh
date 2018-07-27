@@ -13,9 +13,10 @@ done
 rm -rf "$HOME/.vim"
 ln -sf "$dir/.vim"       "$HOME/.vim"
 
-ln -sf "$dir/.bashrc"    "$HOME/.bashrc"
-ln -sf "$dir/.vimrc"     "$HOME/.vimrc"
-ln -sf "$dir/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
+ln -sf "$dir/.Xresources" "$HOME/.Xresources"
+ln -sf "$dir/.bashrc"     "$HOME/.bashrc"
+ln -sf "$dir/.vimrc"      "$HOME/.vimrc"
+ln -sf "$dir/.gtkrc-2.0"  "$HOME/.gtkrc-2.0"
 
 yes | vim -c :PluginInstall -c :qa!
 

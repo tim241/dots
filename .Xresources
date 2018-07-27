@@ -1,0 +1,5 @@
+URxvt.font: xft:Fira Code:size=10
+URxvt.boldFont: xft:Fira Code:size=10
+URxvt.scrollBar: false
+URxvt.background: #000000
+URxvt.foreground: #FFFFFF
