@@ -21,8 +21,11 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Set vim theme
-colorscheme gruvbox
-
+try
+    colorscheme gruvbox
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme default
+endtry
 " Gruvbox theme settings
 set background=dark
 let g:gruvbox_contrast_dark  = "soft"
