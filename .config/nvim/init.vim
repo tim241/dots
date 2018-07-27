@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin("~/.config/nvim/bundle")
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -24,6 +24,7 @@ filetype plugin indent on    " required
 colorscheme gruvbox
 
 " Gruvbox theme settings
+set background=dark
 let g:gruvbox_contrast_dark  = "soft"
 let g:gruvbox_contrast_light = "soft"
 

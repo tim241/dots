@@ -20,6 +20,6 @@ then
 fi
 
 # Make vim the standard editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
