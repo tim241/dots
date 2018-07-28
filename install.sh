@@ -9,11 +9,11 @@ set -e
 git submodule update --init
 
 dir="$(pwd)"
-for config_dir in bspwm sxhkd gtk-3.0 nvim
+for config_dir in .config/*
 do
-    rm -rf "$HOME/.config/$config_dir"
-    ln -sf "$dir/.config/$config_dir" \
-        "$HOME/.config/$config_dir"
+    rm -rf "$HOME/$config_dir"
+    ln -sf "$dir/$config_dir" \
+        "$HOME/$config_dir"
 done
 
 symlink_items=".Xresources .bashrc .gtkrc-2.0"
