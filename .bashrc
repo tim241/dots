@@ -58,6 +58,6 @@ if [ "$(tty)" = "/dev/tty1" ] && \
     [ -f "$HOME/.xinitrc" ] && \
     command -v startx > /dev/null 2>&1
 then
-    startx
+    exec startx
 fi
 
