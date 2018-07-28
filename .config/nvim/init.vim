@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin("~/.config/nvim/bundle")
+set rtp+=~/.config/nvim/plugins/manager/Vundle.vim
+call vundle#begin("~/.config/nvim/plugins")
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
