@@ -3,6 +3,7 @@
 #
 # <-- Autostart -->
 #
+
 (
 # shortcut server
 #
@@ -12,14 +13,26 @@ sxhkd &
 redshift &
 # Audio server
 #
-pulseaudio &
+(
+    # Make sure pulseaudio isn't running
+    if proc="$(pgrep pulseaudio)"; then
+        kill $proc
+    fi
+    sleep 2
+    pulseaudio
+) &
 # Get variables from Xresources
 #
-xrdb ~/.Xresources
+xrdb ~/.Xresources &
+# Set background
+#
+xsetroot -solid '#32302f'
 ) &
+
 #
 # <-- bspwm stuff -->
 #
+
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -30,4 +43,7 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+# Set border color
+bspc config normal_border_color '#ebdbb2'
+bspc config active_border_color '#817F7F'
 
