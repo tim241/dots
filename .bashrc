@@ -5,10 +5,17 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# <-- PS1 stuff -->
+#
 PS1='[\u@\h \W]\$ '
 
-# XDG stuff
+
+# <-- alias stuff -->
+#
+alias ls='ls --color=auto'
+
+
+# <-- XDG stuff -->
 #
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -18,6 +25,9 @@ do
     export "$line"
 done < "$XDG_CONFIG_HOME/user-dirs.dirs" 2> /dev/null
 
+
+# <-- gruvbox stuff -->
+#
 # Make sure gruvbox has the correct color pallet
 gruvbox_pallet="$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 if [ -f "$gruvbox_pallet" ]
@@ -25,6 +35,9 @@ then
     source "$gruvbox_pallet"
 fi
 
+
+# <-- text editor stuff -->
+#
 # Make vim the standard editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
