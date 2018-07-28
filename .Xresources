@@ -5,6 +5,9 @@
 URxvt.font:     xft:Fira Code:size=10
 URxvt.boldFont: xft:Fira Code:size=10
 
+! set padding
+URxvt.internalBorder: 10
+
 ! disable scrollbar
 URxvt.scrollBar: false
 
