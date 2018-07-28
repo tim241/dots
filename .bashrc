@@ -28,7 +28,6 @@ done < "$XDG_CONFIG_HOME/user-dirs.dirs" 2> /dev/null
 
 # <-- gruvbox stuff -->
 #
-# Make sure gruvbox has the correct color pallet
 gruvbox_pallet="$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 if [ -f "$gruvbox_pallet" ]
 then
@@ -38,7 +37,6 @@ fi
 
 # <-- text editor stuff -->
 #
-# Make vim the standard editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
