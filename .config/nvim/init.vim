@@ -30,6 +30,8 @@ endtry
 set background=dark
 let g:gruvbox_contrast_dark  = "soft"
 let g:gruvbox_contrast_light = "soft"
+" Comment this out once terminal theme is different from gruvbox
+autocmd VimEnter * hi Normal ctermbg=none
 
 " Make sure syntax highlighting is on
 syntax on
