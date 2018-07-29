@@ -2,8 +2,8 @@
 !!
 
 ! set font
-URxvt.font:     xft:Fira Code:size=10
-URxvt.boldFont: xft:Fira Code:size=10
+URxvt.font:     xft:Fira Mono:size=10
+URxvt.boldFont: xft:Fira Mono:size=10
 
 ! set padding
 URxvt.internalBorder: 10
