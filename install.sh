@@ -43,5 +43,10 @@ do
     ln -sf "$dir/$item" "$HOME/$item"
 done
 
+if [ ! -d "$HOME/.mozilla" ]
+then
+    cp -r "$dir/.mozilla" "$HOME/.mozilla"
+fi
+
 nvim -c :PluginInstall -c :qa!
 
