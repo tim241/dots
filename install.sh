@@ -9,6 +9,9 @@ set -e
 
 git submodule update --init
 
+[ ! "$HOME"    ] && exit 1
+[ ! -d "$HOME" ] && exit 1
+
 for pkg_man in pacman
 do
     if command -v "$pkg_man" > /dev/null 2>&1
@@ -26,8 +29,13 @@ do
         "$HOME/$config_dir"
 done
 
-symlink_items=".Xresources .bashrc .gtkrc-2.0"
-for item in $symlink_items
+symlink_items=(
+               '.Xresources'
+               '.bashrc'
+               '.gtkrc-2.0'
+               )
+
+for item in "${symlink_items[@]}"
 do
     ln -sf "$dir/$item" "$HOME/$item"
 done
