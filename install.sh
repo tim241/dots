@@ -6,7 +6,17 @@
 # Thank you for reading and understanding
 #
 set -e
+
 git submodule update --init
+
+for pkg_man in pacman
+do
+    if command -v "$pkg_man" > /dev/null 2>&1
+    then
+        bash ".install/${pkg_man}.sh"
+        break
+    fi
+done
 
 dir="$(pwd)"
 for config_dir in .config/*
