@@ -12,6 +12,8 @@ git submodule update --init
 [ ! "$HOME"    ] && exit 1
 [ ! -d "$HOME" ] && exit 1
 
+[ ! -d "$HOME/.config" ] && mkdir "$HOME/.config"
+
 for pkg_man in pacman
 do
     if command -v "$pkg_man" > /dev/null 2>&1
