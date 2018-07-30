@@ -35,6 +35,8 @@ export EDITOR="$VISUAL"
 
 # enable colors for ls
 alias ls='ls --color=auto'
+# easy fix for common mistake
+alias sl='ls'
 # quick way to list everything
 alias ll='ls -la'
 # easy access to text editor
