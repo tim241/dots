@@ -45,10 +45,11 @@ alias v="$VISUAL"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 # Import user-dirs.dirs
-while read -r line
-do
-    export "$line"
-done < "$XDG_CONFIG_HOME/user-dirs.dirs" 2> /dev/null
+xdg_dir_file="$XDG_CONFIG_HOME/user-dirs.dirs"
+if [ -f "$xdg_dir_file" ]
+then
+    source "$xdg_dir_file" 2> /dev/null
+fi
 
 #
 # <-- gruvbox stuff -->
