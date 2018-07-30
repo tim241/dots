@@ -11,16 +11,14 @@ sxhkd &
 # This helps to not kill ur eyes
 #
 redshift &
+# Notification daemon
+#
+dunst &
 # Audio server
 #
-(
-    # Make sure pulseaudio isn't running
-    if proc="$(pgrep pulseaudio)"; then
-        kill $proc
-    fi
-    sleep 2
-    pulseaudio
-) &
+killall pulseaudio
+sleep 2
+pulseaudio & 
 # Get variables from Xresources
 #
 xrdb ~/.Xresources &
