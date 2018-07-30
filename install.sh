@@ -13,6 +13,7 @@ git submodule update --init
 [ ! -d "$HOME" ] && exit 1
 
 [ ! -d "$HOME/.config" ] && mkdir "$HOME/.config"
+[ ! -d "$HOME/.themes" ] && mkdir "$HOME/.themes"
 
 for pkg_man in pacman
 do
@@ -24,7 +25,7 @@ do
 done
 
 dir="$(pwd)"
-for config_dir in .config/*
+for config_dir in .config/* .themes
 do
     rm -rf "$HOME/$config_dir"
     ln -sf "$dir/$config_dir" \
