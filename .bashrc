@@ -19,7 +19,7 @@ PS1='[\u@\h \W]\$ '
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 
-# include $HOME/bin to PATH
+# add $HOME/bin to PATH
 export PATH="$PATH:$HOME/bin"
 
 #
