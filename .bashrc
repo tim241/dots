@@ -49,7 +49,7 @@ done < "$XDG_CONFIG_HOME/user-dirs.dirs" 2> /dev/null
 # <-- gruvbox stuff -->
 #
 
-gruvbox_pallet="$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+gruvbox_pallet="$HOME/.config/nvim/plugins/gruvbox/gruvbox_256palette.sh"
 if [ -f "$gruvbox_pallet" ]
 then
     source "$gruvbox_pallet"
