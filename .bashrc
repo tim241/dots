@@ -12,6 +12,12 @@
 PS1='[\u@\h \W]\$ '
 
 #
+# <-- variable stuff -->
+#
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+#
 # <-- text editor stuff -->
 #
 
