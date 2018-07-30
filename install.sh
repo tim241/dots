@@ -32,6 +32,10 @@ do
         "$HOME/$config_dir"
 done
 
+# Fix xdg-user-dirs-update overriding user-dirs.dirs
+#
+sudo chown root "$HOME/.config/user-dirs.dirs"
+
 symlink_items=(
                '.Xresources'
                '.bashrc'
@@ -50,4 +54,15 @@ then
 fi
 
 nvim -c :PluginInstall -c :qa!
+
+# Create directories
+for dir in dev media/vids media/pics media/music \
+    media/docs media/public media/templates .desktop dls
+do
+    dir="$HOME/$dir"
+    if [ ! -d "$dir" ]
+    then
+        mkdir -p "$dir"
+    fi
+done
 
