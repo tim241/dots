@@ -32,10 +32,6 @@ do
         "$HOME/$config_dir"
 done
 
-# Fix xdg-user-dirs-update overriding user-dirs.dirs
-#
-sudo chown root "$HOME/.config/user-dirs.dirs"
-
 symlink_items=(
                '.Xresources'
                '.bashrc'

@@ -4,7 +4,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 xorg-server xorg-xsetroot xorg-xinit \
                 redshift pulseaudio firefox \
                 neovim dmenu dunst \
-                otf-fira-mono
+                otf-fira-mono \
+                xdg-utils xdg-user-dirs
 do
     if ! pacman -Qi $package > /dev/null 2>&1
     then
