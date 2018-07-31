@@ -16,9 +16,15 @@ redshift &
 dunst &
 # Audio server
 #
-killall pulseaudio
-sleep 2
-pulseaudio & 
+(
+    while ! pactl list sinks > /dev/null 2>&1
+    do
+        killall pulseaudio   2> /dev/null
+        sleep 2
+        pulseaudio &
+        sleep 2
+    done
+) &
 # Get variables from Xresources
 #
 xrdb ~/.Xresources &
