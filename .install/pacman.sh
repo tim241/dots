@@ -5,7 +5,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 redshift pulseaudio firefox \
                 neovim dmenu dunst \
                 otf-fira-mono \
-                xdg-utils xdg-user-dirs
+                xdg-utils xdg-user-dirs \
+                bash-completion
 do
     if ! pacman -Qi $package > /dev/null 2>&1
     then
