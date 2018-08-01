@@ -53,7 +53,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # <-- gruvbox stuff -->
 #
 
-gruvbox_pallet="$HOME/.config/nvim/plugins/gruvbox/gruvbox_256palette.sh"
+gruvbox_pallet="$HOME/.local/share/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 if [ -f "$gruvbox_pallet" ]
 then
     source "$gruvbox_pallet"
