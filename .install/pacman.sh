@@ -6,7 +6,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 neovim dmenu dunst \
                 otf-fira-mono \
                 xdg-utils xdg-user-dirs \
-                bash-completion
+                bash-completion \
+                autocutsel
 do
     if ! pacman -Qi $package > /dev/null 2>&1
     then

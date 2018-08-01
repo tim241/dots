@@ -8,29 +8,39 @@
 # shortcut server
 #
 sxhkd &
+
 # This helps to not kill ur eyes
 #
 redshift &
+
 # Notification daemon
 #
 dunst &
+
 # Audio server
 #
 (
     while ! pactl list sinks > /dev/null 2>&1
     do
-        killall pulseaudio   2> /dev/null
+        pulseaudio --kill
         sleep 2
         pulseaudio &
         sleep 2
     done
 ) &
+
 # Get variables from Xresources
 #
 xrdb ~/.Xresources &
+
 # Set background
 #
 xsetroot -solid '#32302f'
+
+# Clipboard manager
+#
+autocutsel -fork &
+autocutsel -fork -selection PRIMARY &
 ) &
 
 #
