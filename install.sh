@@ -44,10 +44,13 @@ do
     ln -sf "$dir/$item" "$HOME/$item"
 done
 
-if [ ! -d "$HOME/.mozilla" ]
-then
-    cp -r "$dir/.mozilla" "$HOME/.mozilla"
-fi
+for directory in .mozilla .weechat
+do
+    if [ ! -d "$HOME/$directory" ]
+    then
+        cp -r "$dir/$directory" "$HOME/$directory"
+    fi
+done
 
 nvim -c :PluginInstall -c :qa!
 
