@@ -1,5 +1,5 @@
 gtk-theme-name="gruvbox-soft"
-gtk-icon-theme-name="Adwaita"
+gtk-icon-theme-name="gruvbox-soft"
 gtk-font-name="Fira Mono 9"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
