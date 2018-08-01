@@ -1,23 +1,18 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/plugins/manager/Vundle.vim
-call vundle#begin("~/.config/nvim/plugins")
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin("~/.local/share/nvim/plugged")
 
 " Gruvbox theme
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " Status bar
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " Git wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 
 " Set vim theme

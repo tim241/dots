@@ -7,8 +7,6 @@
 #
 set -e
 
-git submodule update --init
-
 [ ! "$HOME"    ] && exit 1
 [ ! -d "$HOME" ] && exit 1
 
@@ -52,7 +50,11 @@ do
     fi
 done
 
-nvim -c :PluginInstall -c :qa!
+# Prepare nvim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim -c :PlugInstall -c :qa!
 
 # Create directories
 for dir in dev media/vids media/pics media/music \
