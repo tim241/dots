@@ -12,8 +12,11 @@ Plug 'vim-airline/vim-airline'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
-call plug#end()            " required
-filetype plugin indent on    " required
+" File explorer
+Plug 'scrooloose/nerdtree'
+
+call plug#end()
+filetype plugin indent on
 
 " Set vim theme
 "
@@ -22,6 +25,7 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
 endtry
+
 " Gruvbox theme settings
 "
 set background=dark
@@ -51,4 +55,8 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.maxlinenr = ' |'
+
+" NERDtree settings
+"
+map <C-n> :NERDTreeToggle<CR>
 
