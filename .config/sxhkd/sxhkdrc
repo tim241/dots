@@ -2,6 +2,11 @@
 # wm independent hotkeys
 #
 
+# rotate
+
+super + control + {Left,Right}
+    bspc node @/ -R {90,270}
+
 # terminal emulator
 super + Return
 	urxvt
