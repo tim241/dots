@@ -2,7 +2,8 @@
 set -e
 for package in bspwm sxhkd rxvt-unicode \
                 xorg-server xorg-xsetroot xorg-xinit \
-                redshift pulseaudio firefox \
+                pulseaudio pulseaudio-alsa \
+                redshift firefox \
                 neovim dmenu dunst \
                 otf-fira-mono \
                 xdg-utils xdg-user-dirs \
