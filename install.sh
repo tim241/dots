@@ -42,7 +42,7 @@ do
     ln -sf "$dir/$item" "$HOME/$item"
 done
 
-for directory in .mozilla .weechat
+for directory in .mozilla .weechat bin
 do
     if [ ! -d "$HOME/$directory" ]
     then

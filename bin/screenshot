@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e
+
+XDG_PICTURES_DIR="$(xdg-user-dir PICTURES)"
+
+if [ ! "$XDG_PICTURES_DIR" ]
+then
+    XDG_PICTURES_DIR="$HOME/Pictures"
+fi
+
+if [ ! -d "$XDG_PICTURES_DIR" ]
+then
+    mkdir -p "$XDG_PICTURES_DIR"
+fi
+
+image="$XDG_PICTURES_DIR/$(date +%Y-%m-%d_%H-%M-%S).png"
+
+scrot "$image" $@
+
+if command -v xclip > /dev/null 2>&1
+then
+    xclip -selection clipboard -t image/png -i "$image"
+fi
