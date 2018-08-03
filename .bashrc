@@ -9,7 +9,7 @@
 # <-- PS1 stuff -->
 #
 
-PS1='\u \W '
+PS1='» \W '
 
 #
 # <-- variable stuff -->
