@@ -7,7 +7,7 @@ call plug#begin("~/.local/share/nvim/plugged")
 Plug 'morhetz/gruvbox'
 
 " Status bar
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
@@ -49,14 +49,17 @@ set expandtab
 "
 set number
 
-" Fix for my font for vim-airline
-"
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.maxlinenr = ' |'
-
 " NERDtree settings
 "
 map <C-n> :NERDTreeToggle<CR>
+
+" Lightline settings
+"
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
+
+" Enable noshowmode
+"
+set noshowmode
 
