@@ -4,7 +4,7 @@ for package in bspwm sxhkd rxvt-unicode \
                 xorg-server xorg-xsetroot xorg-xinit \
                 pulseaudio pulseaudio-alsa \
                 redshift firefox weechat \
-                neovim dmenu dunst \
+                neovim rofi dunst \
                 otf-fira-mono \
                 xdg-utils xdg-user-dirs \
                 bash-completion \

@@ -13,7 +13,7 @@ super + Return
 
 # program launcher
 super + {@space,r}
-	dmenu_run
+	~/.config/bspwm/bin/rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
