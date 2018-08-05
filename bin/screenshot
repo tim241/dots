@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+function notify-send() {
+    if which notify-send &> /dev/null
+    then
+        "$(which notify-send)" -t 1000 "$@"
+    fi
+
+}
+
 XDG_PICTURES_DIR="$(xdg-user-dir PICTURES)"
 
 if [ ! "$XDG_PICTURES_DIR" ]
@@ -17,7 +25,10 @@ image="$XDG_PICTURES_DIR/$(date +%Y-%m-%d_%H-%M-%S).png"
 
 scrot "$image" $@
 
-if command -v xclip > /dev/null 2>&1
+if command -v xclip &> /dev/null
 then
     xclip -selection clipboard -t image/png -i "$image"
+    notify-send "[screenshot] copied to clipboard"
+else
+    notify-send "[screenshot] saved"
 fi
