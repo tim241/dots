@@ -11,7 +11,7 @@ for package in bspwm sxhkd rxvt-unicode \
                 autocutsel \
                 w3m neomutt
 do
-    if ! pacman -Qi $package > /dev/null 2>&1
+    if ! pacman -Qi "$package" &> /dev/null
     then
         install_pkgs+=("$package")
     fi
