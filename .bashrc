@@ -6,10 +6,16 @@
 [[ $- != *i* ]] && return
 
 #
+# <-- source stuff -->
+#
+
+source ~/.bash/git-prompt.sh
+
+#
 # <-- PS1 stuff -->
 #
 
-PS1='» \W '
+PS1='» \W$(__git_ps1) '
 
 #
 # <-- variable stuff -->

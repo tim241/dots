@@ -23,7 +23,7 @@ do
 done
 
 dir="$(pwd)"
-for config_dir in .config/* .themes .icons
+for config_dir in .config/* .themes .icons .bash
 do
     rm -rf "$HOME/$config_dir"
     ln -sf "$dir/$config_dir" \
