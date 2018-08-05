@@ -8,7 +8,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 otf-fira-mono \
                 xdg-utils xdg-user-dirs \
                 bash-completion \
-                autocutsel
+                autocutsel \
+                w3m neomutt
 do
     if ! pacman -Qi $package > /dev/null 2>&1
     then

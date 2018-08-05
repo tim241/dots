@@ -1,0 +1,42 @@
+#
+# <-- source section -->
+#
+
+source '~/.config/mutt/accounts/tim241@mailbox.org'
+source '~/.config/mutt/gpg.rc'
+source '~/.config/mutt/colors'
+source '~/.config/mutt/sidebar'
+source '~/.config/mutt/controls'
+
+#
+# <-- path settings -->
+#
+set header_cache = '~/.cache/mutt_header_cache'
+set mailcap_path = '~/.config/mutt/mailcap'
+
+#
+# <-- pgp settings -->
+#
+
+set pgp_autosign = yes
+set pgp_sign_as = "tim241@mailbox.org"
+set pgp_replyencrypt = yes
+
+#
+# <-- misc settings -->
+#
+
+# notification command
+set new_mail_command="notify-send '[mail]' '%n new messages' &"
+# autoview html
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+# set editor
+set editor = `echo \$EDITOR`
+# misc
+set sort = 'reverse-date'
+set timeout = "5"
+set mail_check = "10"
+set date_format="%d.%m %I:%M"
+set index_format="%2C %Z %d %-15.15F %s (%-4.4c)"
+

@@ -47,6 +47,8 @@ alias sl='ls'
 alias ll='ls -la'
 # easy access to text editor
 alias v="$VISUAL"
+# easy access to mail
+alias m='neomutt'
 
 #
 # <-- XDG stuff -->
