@@ -1,5 +1,6 @@
 # vim: filetype=muttrc
 set realname = "Tim Wanders" 
+set from = "tim241@mailbox.org"
 
 set imap_user = tim241@mailbox.org
 set imap_pass = `~/.config/mutt/scripts/passwd get tim241@mailbox.org`
