@@ -9,7 +9,7 @@
 # <-- source stuff -->
 #
 
-source ~/.bash/git-prompt.sh
+source ~/.local/share/bash/git-prompt.sh
 
 #
 # <-- PS1 stuff -->
