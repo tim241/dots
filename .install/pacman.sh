@@ -9,7 +9,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 xdg-utils xdg-user-dirs \
                 bash-completion \
                 autocutsel \
-                w3m neomutt
+                w3m neomutt \
+                acpi
 do
     if ! pacman -Qi "$package" &> /dev/null
     then
