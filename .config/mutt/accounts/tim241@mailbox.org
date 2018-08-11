@@ -3,11 +3,11 @@ set realname = "Tim Wanders"
 set from = "tim241@mailbox.org"
 
 set imap_user = tim241@mailbox.org
-set imap_pass = `~/.config/mutt/scripts/passwd get tim241@mailbox.org`
+set imap_pass = `~/.config/mutt/scripts/password.sh get tim241@mailbox.org`
 set folder = imaps://imap.mailbox.org/
 
 set smtp_url = smtps://tim241@mailbox.org@smtp.mailbox.org:465
-set smtp_pass = `~/.config/mutt/scripts/passwd get tim241@mailbox.org`
+set smtp_pass = `~/.config/mutt/scripts/password.sh get tim241@mailbox.org`
 set smtp_authenticators = PLAIN
 
 set spoolfile = +INBOX 
@@ -15,4 +15,7 @@ set record = +Sent
 set postponed = +Drafts
 
 set ssl_force_tls = yes
-mailboxes +INBOX +Drafts +Sent +Drafts +Catchall +Pending
+
+# offlineimap
+set folder = "~/media/mail"
+source ~/.local/share/mutt/mailboxes

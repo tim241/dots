@@ -58,4 +58,5 @@ set sidebar_format = '%B %> %?N? %N?'
 #       unsorted - do not sort the mailboxes
 set sidebar_sort_method = 'path'
 
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/? %?S?%S?'
 # vim: syntax=muttrc

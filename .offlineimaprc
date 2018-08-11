@@ -1,0 +1,35 @@
+[general]
+# List of accounts to be synced, separated by a comma.
+accounts = tim241@mailbox.org
+# Path to file with arbitrary Python code to be loaded
+pythonfile = ~/.config/mutt/scripts/password.py
+
+[Account tim241@mailbox.org]
+# Identifier for the local repository; e.g. the maildir to be synced via IMAP.
+localrepository = local
+# Identifier for the remote repository; i.e. the actual IMAP, usually non-local.
+remoterepository = tim241@mailbox-remote
+
+[Repository local]
+# OfflineIMAP supports Maildir, GmailMaildir, and IMAP for local repositories.
+type = Maildir
+# Where should the mail be placed?
+localfolders = ~/media/mail
+
+[Repository tim241@mailbox-remote]
+type = IMAP
+# Synchronize only the folders I want
+folderfilter = lambda foldername: foldername in ["INBOX", "Sent", "Drafts", "Sent", "Pending"]
+remotehost = imap.mailbox.org
+remoteuser = tim241@mailbox.org
+remotepasseval = get_pass("tim241@mailbox.org")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+# Mutt stuff
+[mbnames]
+enabled = yes
+filename = ~/.local/share/mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"

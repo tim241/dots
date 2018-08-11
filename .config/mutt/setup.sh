@@ -3,5 +3,6 @@ for mail in accounts/*
 do
     mail="${mail/accounts\//}"
     echo "Configuring $mail"
-    ./scripts/passwd set "$mail"
+    ./scripts/password.sh set "$mail"
+    offlineimap -a "$mail"
 done

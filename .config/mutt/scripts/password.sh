@@ -13,7 +13,7 @@ function getPasswd() {
         exit
     fi
 
-    gpg2 --decrypt --quiet "$file"
+    gpg --decrypt --quiet "$file"
     exit
 }
 

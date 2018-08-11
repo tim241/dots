@@ -5,3 +5,11 @@ macro index gs "<change-folder>=Sent<enter>" "Go to sent"
 macro index gd "<change-folder>=Drafts<enter>" "Go to drafts"
 macro index gj "<change-folder>=Junk<enter>" "Go to junk"
 macro index gt "<change-folder>=Trash<enter>" "Go to trash"
+# Sidebar stuff
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+# Sync mail using offlineimap
+macro index S "<shell-escape>offlineimap<enter><enter>" "run offlineimap to sync all mail"
