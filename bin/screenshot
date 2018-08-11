@@ -1,34 +1,55 @@
 #!/usr/bin/env bash
 set -e
 
-function notify-send() {
-    if which notify-send &> /dev/null
+upload=no
+
+case $1 in
+    -u|--upload)
+        shift; upload=yes;;
+esac
+
+
+function notify() {
+    if command -v notify-send &> /dev/null
     then
-        "$(which notify-send)" -t 1000 "$@"
+        notify-send -t 1000 "$@"
     fi
 
 }
 
-XDG_PICTURES_DIR="$(xdg-user-dir PICTURES)"
+function clipboard() {
+    if command -v xclip &> /dev/null
+    then
+        if [ -f "$@" ]
+        then
+            xclip -selection clipboard -t image/png -i "$@"
+        else
+            echo "$@" | xclip -selection clipboard
+        fi
+        notify "[screenshot] copied to clipboard"
+    fi
+}
 
-if [ ! "$XDG_PICTURES_DIR" ]
+if ! pic_dir="$(xdg-user-dir PICTURES)"
 then
-    XDG_PICTURES_DIR="$HOME/Pictures"
+    pic_dir="$HOME/Pictures"
 fi
 
-if [ ! -d "$XDG_PICTURES_DIR" ]
+shot_dir="$pic_dir/shots"
+
+if [ ! -d "$shot_dir" ]
 then
-    mkdir -p "$XDG_PICTURES_DIR"
+    mkdir -p "$shot_dir"
 fi
 
-image="$XDG_PICTURES_DIR/$(date +%Y-%m-%d_%H-%M-%S).png"
+image="$shot_dir/$(date +%Y-%m-%d_%H-%M-%S).png"
 
 scrot "$image" $@
 
-if command -v xclip &> /dev/null
+if [ "$upload" = "yes" ]
 then
-    xclip -selection clipboard -t image/png -i "$image"
-    notify-send "[screenshot] copied to clipboard"
+    clipboard "$(curl -sF"file=@$image" http://0x0.st)"
 else
-    notify-send "[screenshot] saved"
+    clipboard "$image"
 fi
+
