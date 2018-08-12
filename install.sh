@@ -35,6 +35,7 @@ symlink_items=(
                '.bashrc'
                '.gtkrc-2.0'
                '.xinitrc'
+               '.offlineimaprc'
                )
 
 for item in "${symlink_items[@]}"
