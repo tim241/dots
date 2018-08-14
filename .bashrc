@@ -74,7 +74,7 @@ fi
 # autostart X
 if [ "$(tty)" = "/dev/tty1" ] && \
     [ -f "$HOME/.xinitrc" ] && \
-    command -v startx > /dev/null 2>&1
+    command -v startx &> /dev/null
 then
     exec startx
 fi
