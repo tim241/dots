@@ -12,4 +12,4 @@ bind index,pager \Co sidebar-open
 bind index,pager \Cp sidebar-prev-new
 bind index,pager \Cn sidebar-next-new
 # Sync mail using offlineimap
-macro index S "<shell-escape>offlineimap<enter><enter>" "run offlineimap to sync all mail"
+macro index S "<shell-escape>~/.config/mutt/scripts/sync.sh<enter><enter>" "run offlineimap to sync all mail"
