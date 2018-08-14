@@ -11,7 +11,7 @@ do
     battery_amount="${battery_amount//%,}"
     
     if (($battery_amount < 10)) && \
-        [ "$battery_statis" != "Charging" ]
+        [ "$battery_status" != "Charging" ]
     then
         notify-send "[battery] $battery_amount%"
     fi
