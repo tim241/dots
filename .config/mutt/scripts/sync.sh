@@ -7,12 +7,8 @@ then
     mkdir -p "$data_dir"
 fi
 
-if [ -f "$config_dir/config" ]
-then
-    ln -sf "$config_dir/config" "$HOME/.offlineimaprc"
-    ln -sf "$data_dir" "$HOME/.offlineimap"
-fi
+ln -sf "$data_dir" "$HOME/.offlineimap"
 
 offlineimap $@
 
-rm -f "$HOME/.offlineimaprc" "$HOME/.offlineimap"
+rm -f "$HOME/.offlineimap"
