@@ -22,6 +22,9 @@ do
     fi
 done
 
+# Create required directories
+mkdir -p "$HOME/.local/share"
+
 dir="$(pwd)"
 for config_dir in .config/* .themes .icons .local/share/bash
 do
@@ -35,7 +38,6 @@ symlink_items=(
                '.bashrc'
                '.gtkrc-2.0'
                '.xinitrc'
-               '.offlineimaprc'
                )
 
 for item in "${symlink_items[@]}"
