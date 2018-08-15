@@ -4,5 +4,5 @@ do
     mail="${mail/accounts\//}"
     echo "Configuring $mail"
     ./scripts/password.sh set "$mail"
-    offlineimap -a "$mail"
+    ./scripts/sync.sh -a "$mail"
 done
