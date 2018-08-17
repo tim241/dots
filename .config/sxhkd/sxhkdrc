@@ -124,3 +124,12 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + alt + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# screenshots
+#
+Print
+    screenshot
+
+ctrl + Print
+    sleep 0.5 && screenshot -s
