@@ -10,7 +10,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 bash-completion \
                 autocutsel \
                 w3m neomutt offlineimap \
-                acpi
+                acpi \
+                scrot xclip
 do
     if ! pacman -Qi "$package" &> /dev/null
     then
