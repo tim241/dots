@@ -29,7 +29,7 @@ frame_color = "#ebdbb2"
 
 # Misc
 sort     = yes
-geometry = "200x5-6+30"
+geometry = "300x5-30+40"
 
 # Padding
 padding  = 8
