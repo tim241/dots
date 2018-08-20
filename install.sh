@@ -25,12 +25,38 @@ done
 # Create required directories
 mkdir -p "$HOME/.local/share"
 
+
+block_symlink_dirs=(
+                    '.config/weechat'
+                    '.mozilla'
+                    'bin'
+                    )
+
 dir="$(pwd)"
-for config_dir in .config/* .themes .icons .local/share/bash
+for config_dir in .config/* .themes .icons .local/share/bash \
+    .mozilla bin
 do
-    rm -rf "$HOME/$config_dir"
-    ln -sf "$dir/$config_dir" \
-        "$HOME/$config_dir"
+    blocked=false
+    for blacklist_dir in "${block_symlink_dirs[@]}"
+    do
+        if [ "$config_dir" = "$blacklist_dir" ]
+        then
+            blocked=true
+        fi
+    done
+
+    if [ "$blocked" = "false" ]
+    then
+        rm -rf "$HOME/$config_dir"
+        ln -sf "$dir/$config_dir" \
+            "$HOME/$config_dir"
+    else
+        if [ ! -d "$HOME/$config_dir" ]
+        then
+            cp -r "$dir/$config_dir" \
+                "$HOME/$config_dir"
+        fi
+    fi
 done
 
 symlink_items=(
@@ -42,14 +68,6 @@ symlink_items=(
 for item in "${symlink_items[@]}"
 do
     ln -sf "$dir/$item" "$HOME/$item"
-done
-
-for directory in .mozilla .weechat bin
-do
-    if [ ! -d "$HOME/$directory" ]
-    then
-        cp -r "$dir/$directory" "$HOME/$directory"
-    fi
 done
 
 # Prepare nvim
