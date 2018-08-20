@@ -34,7 +34,6 @@ do
 done
 
 symlink_items=(
-               '.Xresources'
                '.bashrc'
                '.gtkrc-2.0'
                '.xinitrc'
