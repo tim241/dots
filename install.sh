@@ -50,12 +50,10 @@ do
         rm -rf "$HOME/$config_dir"
         ln -sf "$dir/$config_dir" \
             "$HOME/$config_dir"
-    else
-        if [ ! -d "$HOME/$config_dir" ]
-        then
-            cp -r "$dir/$config_dir" \
-                "$HOME/$config_dir"
-        fi
+    elif [ ! -d "$HOME/$config_dir" ]
+    then
+        cp -r "$dir/$config_dir" \
+            "$HOME/$config_dir"
     fi
 done
 
