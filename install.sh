@@ -17,7 +17,7 @@ for pkg_man in pacman
 do
     if command -v "$pkg_man" > /dev/null 2>&1
     then
-        bash ".install/${pkg_man}.sh"
+        bash ".scripts/install/${pkg_man}.sh"
         break
     fi
 done
