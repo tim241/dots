@@ -69,8 +69,13 @@ do
 done
 
 # Prepare nvim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+plug_file="$HOME/.local/share/nvim/site/autoload/plug.vim"
+
+if [ ! -f "$plug_file" ]
+then
+    curl -fLo "$plug_file" --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
 
 nvim -c :PlugInstall -c :qa!
 
