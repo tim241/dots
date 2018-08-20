@@ -57,6 +57,9 @@ alias m='neomutt'
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# set weechat dir to $XDG_CONFIG_HOME/weechat
+export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
+
 #
 # <-- gruvbox stuff -->
 #
