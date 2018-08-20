@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bspwm_bin="${XDG_CONFIG_HOME:-$HOME/.config}/bspwm/bin"
+config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
 #
 # <-- Autostart -->
 #
@@ -10,30 +10,9 @@ bspwm_bin="${XDG_CONFIG_HOME:-$HOME/.config}/bspwm/bin"
 #
 sxhkd &
 
-# This helps to not kill ur eyes
+# Autostart script
 #
-redshift &
-
-# Notification daemon
-#
-dunst &
-
-# Get variables from Xresources
-#
-xrdb ~/.Xresources &
-
-# Set background
-#
-xsetroot -solid '#32302f'
-
-# Clipboard manager
-#
-autocutsel -fork &
-autocutsel -fork -selection PRIMARY &
-
-# Battery notifier
-#
-"$bspwm_bin/battery" &
+"$config_dir/tim241/scripts/autostart.sh" &
 ) &
 
 #

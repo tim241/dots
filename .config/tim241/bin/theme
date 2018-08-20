@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+set -e
+cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/tim241"
+config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/tim241"
+
+default_theme="gruvbox-soft"
+
+function get_theme()
+{
+    if [ ! -f "$cache_dir/theme" ]
+    then
+        echo "$default_theme"
+        exit
+    fi
+    
+    theme="$(cat "$cache_dir/theme")"
+    if [ ! -d "$config_dir/themes/$theme" ]
+    then
+        echo "$default_theme"
+        exit
+    fi
+
+    echo "$theme"
+}
+
+function set_theme()
+{
+    if [ ! "$1" ]
+    then
+        exit 1
+    fi
+
+    theme="$1"
+
+    if [ -d "$config_dir/themes/$theme" ]
+    then
+        [ ! -d "$cache_dir" ] && mkdir -p "$cache_dir"
+        echo "$theme" > "$cache_dir/theme"
+    else
+        echo "invalid theme"
+        exit 1
+    fi
+}
+
+function usage()
+{
+    printf "%s\n%s\n" \
+        "$0 get" \
+        "$0 set"
+}
+case $1 in
+    get)
+        get_theme "$2"
+        ;;
+    set)
+        set_theme "$2"
+        ;;
+    *)
+        usage
+        ;;
+esac

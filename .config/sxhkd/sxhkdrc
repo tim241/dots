@@ -13,7 +13,7 @@ super + Return
 
 # program launcher
 super + {@space,r}
-	~/.config/bspwm/bin/rofi -show run
+	$XDG_CONFIG_HOME/tim241/bin/rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape

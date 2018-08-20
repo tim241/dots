@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-set -e
-theme="$HOME/.config/bspwm/themes/rofi/gruvbox-soft.rasi"
-rofi -theme "$theme" -width 100 -location 3 $@
