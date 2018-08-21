@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 tim241_dir="${XDG_CONFIG_HOME:-$HOME/.config}/tim241"
+tim241_scripts="$tim241_dir/scripts"
 tim241_bin="$tim241_dir/bin"
 
 theme="$("$tim241_bin/theme" get)"
@@ -27,7 +28,7 @@ autocutsel -fork -selection PRIMARY &
 
 # Battery notifier
 #
-"$tim241_bin/battery" &
+"$tim241_scripts/battery.sh" &
 
 # Check for dotfiles update
 #

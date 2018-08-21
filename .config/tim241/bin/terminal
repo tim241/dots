@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/tim241"
+
+term="$(cat "$cache_dir/term" 2> /dev/null)"
+
+if [ ! -f "$cache_dir/term" ] || \
+    ! command -v "$term"
+then
+    urxvt
+else
+    "$term"
+fi
+
+

@@ -9,7 +9,7 @@ super + control + {Left,Right}
 
 # terminal emulator
 super + Return
-	urxvt
+	$XDG_CONFIG_HOME/tim241/bin/terminal
 
 # program launcher
 super + {@space,r}
