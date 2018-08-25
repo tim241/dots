@@ -133,3 +133,9 @@ Print
 
 ctrl + Print
     sleep 0.5 && screenshot -s
+
+#
+# lockscreen
+#
+super + shift + l
+    $XDG_CONFIG_HOME/tim241/scripts/lock.sh
