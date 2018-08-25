@@ -7,12 +7,15 @@
 # find your resolution so images can be resized to match your screen resolution
 res=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')
 
+# cache
+cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}"
+
 init_filenames() {
 	#$1 resolution
 
 	# create folder in ~/.cache/i3lock directory
-	res_folder="$HOME/.cache/i3lock/$1"
-	folder="$HOME/.cache/i3lock/current"
+	res_folder="$cache_dir/i3lock/$1"
+	folder="$cache_dir/i3lock/current"
         echo "Got" $@ $res_folder
 	if [ ! -d  $folder -o -n "$2" ]
 	then
