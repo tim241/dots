@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 for package in bspwm sxhkd rxvt-unicode kitty \
-                xorg-server xorg-xsetroot xorg-xinit \
+                xorg-server xorg-xsetroot xorg-xinit feh \
                 pulseaudio pulseaudio-alsa \
                 redshift firefox weechat \
                 neovim rofi dunst \
