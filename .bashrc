@@ -6,13 +6,6 @@
 [[ $- != *i* ]] && return
 
 #
-# <-- bash settings -->
-#
-
-# enable vi mode
-set -o vi
-
-#
 # <-- source stuff -->
 #
 
