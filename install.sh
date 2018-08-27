@@ -13,7 +13,7 @@ set -e
 [ ! -d "$HOME/.config" ] && mkdir "$HOME/.config"
 [ ! -d "$HOME/.themes" ] && mkdir "$HOME/.themes"
 
-for pkg_man in pacman
+for pkg_man in pacman apt-get
 do
     if command -v "$pkg_man" > /dev/null 2>&1
     then
