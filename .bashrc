@@ -6,6 +6,16 @@
 [[ $- != *i* ]] && return
 
 #
+# <-- bash settings -->
+#
+
+# enable vi mode when we're not in tty
+if [ "$TERM" != "linux" ]
+then
+    bind -f ~/.local/share/bash/vi-mode
+fi
+
+#
 # <-- source stuff -->
 #
 
