@@ -24,7 +24,7 @@ separator_color  = "#585858"
 startup_notification = false
 
 # Border
-frame_width = 1
+frame_width = 2
 frame_color = "#ebdbb2"
 
 # Misc
