@@ -26,6 +26,14 @@ xrdb "$tim241_dir/themes/$theme/Xsettings" &
 autocutsel -fork &
 autocutsel -fork -selection PRIMARY &
 
+# Change cursor
+#
+xsetroot -cursor_name left_ptr &
+
+# Hide cursor
+#
+unclutter -idle 1 -root &
+
 # Battery notifier
 #
 "$tim241_scripts/battery.sh" &
