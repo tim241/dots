@@ -38,6 +38,9 @@ export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 # add $HOME/bin to PATH
 export PATH="$PATH:$HOME/bin"
 
+# use nvim for manpages
+export MANPAGER="nvim -c 'set ft=man' -"
+
 #
 # <-- text editor stuff -->
 #
