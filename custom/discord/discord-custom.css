@@ -13,10 +13,50 @@
 */
 
 :root {
+    /*
+     * gruvbox theme
+     *
+     * hard contrast:   #1d2021
+     * medium contrast: #282828
+     * soft contrast:   #32302f
+     *
+     */
     --background: #32302f;
+
+    --foreground: var(--white);
+
+    /* color0, color8 */
+    --black: #282828;
+    --darkgrey: #928374;
+    
+    /* color1, color9 */
+    --darkred: #cc241d;
     --red: #fb4934;
-    --foreground: #ebdbb2;
+
+    /* color2, color10 */
+    --darkgreen: #98971a;
+    --green: #b8bb26;
+
+    /* color3, color11 */
+    --darkyellow: #d79921;
+    --yellow: #fabd2f;
+
+    /* color4, color12 */
+    --darkblue: #458588;
+    --blue: #83a598;
+
+    /* color5, color13 */
+    --darkmagenta: #b16286;
+    --magenta: #d3869b;
+
+    /* color6, color14 */
+    --darkcyan: #689d6a;
     --cyan: #8ec07c;
+
+    /* color7, color15 */
+    --lightgrey: #a89984;
+    --white: #ebdbb2;
+
 }
 /* Channel List Section */
 .scroller-2wx7Hm {
@@ -203,7 +243,7 @@
     border: 0px solid transparent !important;
     border-left: 0px solid transparent !important;
     border-radius: 2px !important;
-    background-color: var(--background) !important;
+    background-color: var(--foreground) !important;
 }
 
 /* Is Mentioned Bar */
@@ -313,6 +353,21 @@
     border-bottom-color: var(--background);
 }
 
+/* Autocomplete Emoji Picker */
+.autocompleteInner-zh20B_ {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.theme-dark .selectorSelected-1_M1WV {
+    background-color: var(--black);
+}
+.theme-dark .description-11DmNu, .theme-dark .descriptionUsername-J_75O8 {
+    color: var(--foreground);
+}
+.theme-dark .content-Qb0rXO {
+    color: var(--foreground);
+}
 /* Discord Icon */
 .theme-dark .homeIcon-1FoKUJ {
     background-color: var(--background);
@@ -353,17 +408,17 @@
 
 /* Online, Offline, DND, & Invisible Dots */
 .dnd-1_xrcq {
-    background-color: #fb4934;
+    background-color: var(--red);
 }
 
 .online-2S838R {
-    background-color: #b8bb26;
+    background-color: var(--green);
 }
 
 .idle-3DEnRT {
-    background-color: #fabd2f;
+    background-color: var(--yellow);
 }
 
 .invisible-1kp8Z0, .offline-3qoTek, .unknown-Ms2zdV {
-    background-color: #ebdbb2;
+    background-color: var(--white);
 }
