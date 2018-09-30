@@ -13,7 +13,7 @@ do
     if (($battery_amount < 10)) && \
         [ "$battery_status" != "Charging" ]
     then
-        notify-send "[battery] $battery_amount%"
+        notify-send "[battery]" "$battery_amount%"
     fi
 
     sleep 60
