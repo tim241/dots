@@ -10,5 +10,5 @@ git fetch > /dev/null
 
 if [ "$(git log HEAD..origin/master --oneline)" ]
 then
-    notify-send -t 10000 "[dots] update available"
+    notify-send -t 10000 "[dots]" "update available"
 fi
