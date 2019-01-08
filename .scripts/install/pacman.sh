@@ -24,3 +24,17 @@ then
     sudo pacman -S --needed --noconfirm "${install_pkgs[@]}"
 fi
 
+if ! pacman -Qi "polybar" &> /dev/null && \
+    ! pacman -Qi "polybar-git" &> /dev/null
+then
+    mkdir -p /tmp/polybar-aur
+    cd /tmp/polybar-aur
+    curl https://raw.githubusercontent.com/jaagr/polybar/master/contrib/polybar.aur/PKGBUILD \
+        -o PKGBUILD
+
+    curl https://raw.githubusercontent.com/jaagr/polybar/master/contrib/polybar.aur/polybar.install \
+        -o polybar.install
+
+    makepkg -sci --noconfirm
+fi
+
