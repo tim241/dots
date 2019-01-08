@@ -11,7 +11,8 @@ for package in bspwm sxhkd rxvt-unicode kitty \
                 autocutsel \
                 w3m neomutt offlineimap \
                 acpi \
-                scrot xclip unclutter pulsemixer
+                scrot xclip unclutter pulsemixer \
+                redshift compton
 do
     if ! pacman -Qi "$package" &> /dev/null
     then
