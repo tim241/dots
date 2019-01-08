@@ -34,9 +34,21 @@ xsetroot -cursor_name left_ptr &
 #
 unclutter -idle 1 -root &
 
+# Stop screen tearing
+#
+compton --vsync-aggressive &
+
+# Protect your eyes
+#
+redshift &
+
 # Battery notifier
 #
 "$tim241_scripts/battery.sh" &
+
+# Bar
+#
+polybar gruvbox &
 
 # Check for dotfiles update
 #
