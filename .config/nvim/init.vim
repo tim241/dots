@@ -63,3 +63,6 @@ let g:lightline = {
 "
 set noshowmode
 
+" Set title
+"
+set title
