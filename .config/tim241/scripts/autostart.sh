@@ -38,10 +38,6 @@ unclutter -idle 1 -root &
 #
 compton --vsync-aggressive &
 
-# Protect your eyes
-#
-redshift &
-
 # Battery notifier
 #
 "$tim241_scripts/battery.sh" &
