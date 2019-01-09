@@ -91,12 +91,3 @@ do
     fi
 done
 
-# Installing discord theme
-for dir in "$HOME/.config"/discord/*.*.*/modules/discord_desktop_core
-do
-    if [ ! -f "$dir/discord-custom.css" ] && \
-        [ -d "$dir" ]
-    then
-        ln -sf "$(pwd)/custom/discord/discord-custom.css" "$dir/discord-custom.css"
-    fi
-done
