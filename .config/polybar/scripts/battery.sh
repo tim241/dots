@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
-info="$(acpi)"
+info="$(acpi 2> /dev/null)"
+
+if [ ! "$info" ]
+then
+    echo 100%
+    exit
+fi
+
 battery_status="$(awk '{print $3}' <<< "$info")"
 battery_amount="$(awk '{print $4}' <<< "$info")"
 # strip strings
