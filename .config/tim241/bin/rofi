@@ -6,4 +6,4 @@ theme="$("$config_dir/tim241/bin/theme" get)"
 
 rasi_file="$config_dir/tim241/themes/$theme/rofi.rasi"
 
-rofi -theme "$rasi_file" -width 100 -location 3 $@
+rofi -theme "$rasi_file" -width 50 -location 0 $@
