@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/tim241"
 
-term="$(cat "$cache_dir/term" 2> /dev/null)"
+term_data="$(cat "$cache_dir/term" 2> /dev/null)"
+term_command="$(echo "$term_data" | cut -d' ' -f1)"
+
+term_cmd="$term_data"
 
 if [ ! -f "$cache_dir/term" ] || \
-    ! command -v "$term"
+    ! command -v "$term_command"
 then
     urxvt
 else
-    "$term"
+    $term_cmd
 fi
 
 
