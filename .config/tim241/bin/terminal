@@ -9,7 +9,7 @@ term_cmd="$term_data"
 if [ ! -f "$cache_dir/term" ] || \
     ! command -v "$term_command"
 then
-    urxvt
+    urxvtc
 else
     $term_cmd
 fi

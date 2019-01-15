@@ -5,6 +5,15 @@ tim241_bin="$tim241_dir/bin"
 
 theme="$("$tim241_bin/theme" get)"
 
+# Start urxvt daemon
+#
+urxvtd &
+
+
+# Make sure pulseaudio is running
+#
+pulseaudio --start &
+
 # This helps to not kill ur eyes
 #
 redshift &
