@@ -12,7 +12,7 @@ urxvtd &
 
 # Make sure pulseaudio is running
 #
-pulseaudio --start &
+pulseaudio --start
 
 # This helps to not kill ur eyes
 #
