@@ -3,7 +3,7 @@ set -e
 
 while true
 do
-    info="$(acpi)"
+    info="$(acpi -b)"
     battery_status="$(awk '{print $3}' <<< "$info")"
     battery_amount="$(awk '{print $4}' <<< "$info")"
     # strip strings
