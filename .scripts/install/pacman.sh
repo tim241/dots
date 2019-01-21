@@ -12,7 +12,7 @@ for package in bspwm sxhkd rxvt-unicode kitty \
                 w3m neomutt offlineimap \
                 acpi \
                 scrot xclip unclutter pulsemixer \
-                redshift compton
+                compton
 do
     if ! pacman -Qi "$package" &> /dev/null
     then
