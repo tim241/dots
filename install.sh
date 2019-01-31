@@ -61,7 +61,6 @@ symlink_items=(
                '.bashrc'
                '.gtkrc-2.0'
                '.xinitrc'
-               '.inputrc'
                )
 
 for item in "${symlink_items[@]}"
