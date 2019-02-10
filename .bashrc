@@ -25,7 +25,7 @@ source ~/.local/share/bash/git-prompt.sh
 # <-- PS1 stuff -->
 #
 
-PS1='» \W$(__git_ps1) '
+PS1='> \W$(__git_ps1) '
 
 #
 # <-- variable stuff -->
