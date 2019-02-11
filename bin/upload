@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+file="$@"
+
+if [ ! "$file" ] || \
+    [ ! -f "$file" ]
+then
+    echo "$0 [file]"
+    exit 1
+fi
+
+curl -sF"file=@$file" http://0x0.st
