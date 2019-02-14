@@ -13,7 +13,7 @@ function getPasswd() {
         exit
     fi
 
-    gpg --decrypt --quiet "$file"
+    gpg2 --decrypt --quiet "$file"
     exit
 }
 
@@ -29,7 +29,7 @@ function setPasswd() {
     printf "password: "
     read -rs password
     echo
-    echo "$password" | gpg --encrypt -r "$mail" \
+    echo "$password" | gpg2 --encrypt -r "$mail" \
         > "$file"
     unset password
 }
