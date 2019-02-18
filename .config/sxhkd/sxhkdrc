@@ -4,19 +4,19 @@
 
 # rotate
 
-super + control + {Left,Right}
+alt + control + {h,l}
     bspc node @/ -R {90,270}
 
 # terminal emulator
-super + Return
+alt + shift + Return
 	$XDG_CONFIG_HOME/tim241/bin/terminal
 
 # program launcher
-super + {@space,r}
+alt + shift + space
 	$XDG_CONFIG_HOME/tim241/bin/rofi -show run
 
 # make sxhkd reload its configuration files:
-super + Escape
+alt + shift + r
 	pkill -USR1 -x sxhkd
 
 #
@@ -24,12 +24,12 @@ super + Escape
 #
 
 # quit bspwm normally
-super + alt + Escape
+alt + shift + Escape
 	bspc quit
 
-# close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
+# close
+alt + shift + c
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -60,8 +60,8 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
+alt + shift + {h,j,k,l}
+	bspc node -f {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -76,8 +76,8 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # ^^
-alt + ctrl + {Left,Right}
-    bspc desktop -f {prev,next}.local
+#alt +  + {h,l}
+#    bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -143,3 +143,9 @@ ctrl + Print
 #
 super + shift + l
     $XDG_CONFIG_HOME/tim241/scripts/lock.sh
+
+#
+# mpc
+#
+Pause
+    mpc toggle
