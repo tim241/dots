@@ -55,6 +55,15 @@ compton --vsync-aggressive &
 #
 polybar gruvbox &
 
+# Mpd daemon
+#
+(
+if ! pgrep mpd
+then
+    mpd &
+fi
+) &
+
 # Check for dotfiles update
 #
 dots_dir="$(readlink "$XDG_CONFIG_HOME/tim241")/../../"
