@@ -13,7 +13,8 @@ for package in bspwm sxhkd rxvt-unicode \
                 acpi \
                 scrot xclip unclutter pulsemixer \
                 compton \
-                polybar
+                polybar \
+                curl
 do
     if ! xbps-query "$package" &> /dev/null
     then
