@@ -12,7 +12,6 @@ for package in bspwm sxhkd rxvt-unicode \
                 w3m neomutt offlineimap \
                 acpi \
                 scrot xclip unclutter pulsemixer \
-                compton \
                 polybar \
                 curl
 do
