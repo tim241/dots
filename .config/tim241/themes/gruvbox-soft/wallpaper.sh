@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 function set_wall()
 {
-    feh --bg-fill "$@"
+    wallpaper="$@"
+    echo "wallpaper: $wallpaper"
+    feh --bg-fill "$wallpaper"
     exit
 }
 
 config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
-wall_dir="$config_dir/tim241/themes/gruvbox-soft/walls/"
+wall_dir="$config_dir/tim241/themes/gruvbox-soft/walls"
 
 xsetroot -solid '#32302f'
 
@@ -17,7 +19,9 @@ fi
 
 source /etc/os-release
 
-if [ "$NAME" = "void" ]
-then
-    set_wall "$wall_dir/void.png"
-fi
+case "$NAME" in
+    "void")
+        set_wall "$wall_dir/void.png";;
+    "Arch Linux")
+        set_wall "$wall_dir/arch.png";;
+esac
