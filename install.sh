@@ -28,6 +28,7 @@ mkdir -p "$HOME/.local/share"
 
 block_symlink_dirs=(
                     '.config/weechat'
+                    '.config/pulse'
                     '.mozilla'
                     'bin'
                     )
