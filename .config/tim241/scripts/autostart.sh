@@ -12,7 +12,15 @@ urxvtd &
 
 # Make sure pulseaudio is running
 #
-pulseaudio --start
+if ! pulseaudio --check
+then
+    if command -v systemctl &> /dev/null
+    then
+        systemctl --user start pulseaudio
+    else
+        pulseaudio --start
+    fi
+fi
 
 # This helps to not kill ur eyes
 #
@@ -28,7 +36,7 @@ xrdb "$tim241_dir/themes/$theme/Xsettings" &
 
 # Set background
 #
-"$tim241_dir/themes/$theme/wallpaper.sh"
+"$tim241_dir/themes/$theme/wallpaper.sh" &
 
 # Clipboard manager
 #
@@ -56,7 +64,7 @@ polybar gruvbox &
 (
 if ! pgrep mpd
 then
-    mpd &
+    mpd
 fi
 ) &
 
