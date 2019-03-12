@@ -8,7 +8,7 @@ function set_wall()
 }
 
 config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
-wall_dir="$config_dir/tim241/themes/gruvbox-soft/walls"
+wall_dir="$config_dir/bspwm/gruvbox-dark-soft/walls"
 
 xsetroot -solid '#32302f'
 
