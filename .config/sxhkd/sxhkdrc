@@ -9,11 +9,11 @@ alt + control + {h,l}
 
 # terminal emulator
 alt + shift + Return
-	$XDG_CONFIG_HOME/tim241/bin/terminal
+	$XDG_CONFIG_HOME/bspwm/bin/terminal
 
 # program launcher
 alt + shift + space
-	$XDG_CONFIG_HOME/tim241/bin/rofi -show run
+	$XDG_CONFIG_HOME/bspwm/bin/rofi -show run
 
 # make sxhkd reload its configuration files:
 alt + shift + r
@@ -142,7 +142,7 @@ ctrl + Print
 # lockscreen
 #
 super + shift + l
-    $XDG_CONFIG_HOME/tim241/scripts/lock.sh
+    $XDG_CONFIG_HOME/bspwm/scripts/lock.sh
 
 #
 # mpc

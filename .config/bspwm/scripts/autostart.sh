@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-tim241_dir="${XDG_CONFIG_HOME:-$HOME/.config}/tim241"
-tim241_scripts="$tim241_dir/scripts"
+tim241_dir="${XDG_CONFIG_HOME:-$HOME/.config}/bspwm"
+scripts="$tim241_dir/scripts"
 tim241_bin="$tim241_dir/bin"
-
-theme="$("$tim241_bin/theme" get)"
 
 # Start urxvt daemon
 #
@@ -32,11 +30,11 @@ dunst &
 
 # Get variables from Xresources
 #
-xrdb "$tim241_dir/themes/$theme/Xsettings" &
+xrdb "$tim241_dir/gruvbox-dark-soft/Xsettings" &
 
 # Set background
 #
-"$tim241_dir/themes/$theme/wallpaper.sh" &
+"$tim241_dir/gruvbox-dark-soft/wallpaper.sh" &
 
 # Clipboard manager
 #
@@ -64,13 +62,13 @@ polybar gruvbox &
 (
 if ! pgrep mpd
 then
-    mpd
+    mpd --no-config --no-daemon
 fi
 ) &
 
 # Check for dotfiles update
 #
-dots_dir="$(readlink "$XDG_CONFIG_HOME/tim241")/../../"
+dots_dir="$(readlink "$XDG_CONFIG_HOME/bspwm")/../../"
 update_file="$dots_dir/.scripts/checkupdate.sh"
 if [ -f "$update_file" ]
 then

@@ -2,8 +2,6 @@
 set -e
 config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
 
-theme="$("$config_dir/tim241/bin/theme" get)"
-
-rasi_file="$config_dir/tim241/themes/$theme/rofi.rasi"
+rasi_file="$config_dir/bspwm/gruvbox-dark-soft/rofi.rasi"
 
 rofi -theme "$rasi_file" -width 50 -location 0 $@

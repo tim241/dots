@@ -12,7 +12,7 @@ sxhkd &
 
 # Autostart script
 #
-"$config_dir/tim241/scripts/autostart.sh" &
+"$config_dir/bspwm/scripts/autostart.sh" &
 ) &
 
 #

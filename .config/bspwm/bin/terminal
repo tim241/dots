@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/tim241"
+cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/bspwm"
 
 term_data="$(cat "$cache_dir/term" 2> /dev/null)"
 term_command="$(echo "$term_data" | cut -d' ' -f1)"

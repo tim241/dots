@@ -5,7 +5,7 @@ then
     exit 1
 fi
 
-config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/tim241"
+config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/bspwm"
 
 if [ "$(man i3lock | grep i3lock-color)" ]
 then
