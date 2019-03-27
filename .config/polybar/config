@@ -117,6 +117,7 @@ format-padding = 2
 [module/title]
 type = internal/xwindow
 format-padding = 4
+label-maxlen = 50
 
 ; get battery %
 [module/battery]
