@@ -3,7 +3,7 @@ set -e
 for package in bspwm sxhkd rxvt-unicode xorg \
                 pulseaudio redshift \
                 firefox weechat neovim \
-                rofi dunst fira xdg-utils \
+                rofi dunst xdg-utils \
                 bash-completion \
                 autocutsel w3m neomutt \
                 offlineimap scrot xclip unclutter \
@@ -25,4 +25,4 @@ then
     fi
 fi
 
-
+./.scripts/font.sh
