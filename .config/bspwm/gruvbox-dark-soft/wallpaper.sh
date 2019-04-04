@@ -17,11 +17,18 @@ then
     set_wall "$wall_dir/brl.png"
 fi
 
-source /etc/os-release
+if [ -f /etc/os-release ]
+then
+    source /etc/os-release 2> /dev/null
+else
+    NAME="$(uname)"
+fi
 
 case "$NAME" in
     "void")
         set_wall "$wall_dir/void.png";;
     "Arch Linux")
         set_wall "$wall_dir/arch.png";;
+    "FreeBSD")
+        set_wall "$wall_dir/FreeBSD.png";;
 esac

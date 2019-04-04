@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-info="$(acpi 2> /dev/null)"
+if ! info="$(acpi 2> /dev/null)"
+then
+    echo 100%
+    exit
+fi
 
 if [ ! "$info" ]
 then

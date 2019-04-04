@@ -88,7 +88,8 @@ fi
 #
 
 # autostart X
-if [ "$(tty)" = "/dev/tty1" ] && \
+if [ "$(tty)" = "/dev/tty1" ] || \
+    [ "$(tty)" = "/dev/ttyv0" ] &&
     [ -f "$HOME/.xinitrc" ] && \
     command -v startx &> /dev/null
 then

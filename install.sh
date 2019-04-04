@@ -13,7 +13,7 @@ set -e
 [ ! -d "$HOME/.config" ] && mkdir "$HOME/.config"
 [ ! -d "$HOME/.themes" ] && mkdir "$HOME/.themes"
 
-for pkg_man in pacman apt-get xbps-install
+for pkg_man in pacman apt-get xbps-install pkg
 do
     if command -v "$pkg_man" > /dev/null 2>&1
     then
