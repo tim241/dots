@@ -60,6 +60,7 @@ done
 
 symlink_items=(
                '.bashrc'
+               '.bash_profile'
                '.gtkrc-2.0'
                '.xinitrc'
                )
