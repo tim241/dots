@@ -60,7 +60,7 @@ polybar gruvbox &
 # Mpd daemon
 #
 (
-if ! pgrep mpd
+if ! pgrep -U "$UID" mpd
 then
     mpd --no-config --no-daemon
 fi
