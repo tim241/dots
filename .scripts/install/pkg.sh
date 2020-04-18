@@ -7,7 +7,7 @@ for package in bspwm sxhkd rxvt-unicode xorg \
                 bash-completion \
                 autocutsel w3m neomutt \
                 offlineimap scrot xclip unclutter \
-                polybar
+                polybar feh xdg-utils xdg-user-dirs
 do
     if ! pkg info "$package" &> /dev/null
     then
